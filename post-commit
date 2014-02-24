@@ -1,0 +1,5 @@
+#!/bin/sh
+export LANG="zh_CN.UTF-8"
+#更新到远程的服务器
+#/home/wwwroot/xxx/svn.php 为svn.php在svn服务器上的存放地址
+/usr/local/php/bin/php /home/wwwroot/xxx/svn.php
