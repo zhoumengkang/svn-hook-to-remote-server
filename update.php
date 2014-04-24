@@ -5,9 +5,9 @@
  * @author  zhoumengkang <i@zhoumengkang.com>
  */
 error_reporting(E_ALL);
-
+//设置下字符集，有不认识的字符，也会导致不可更新
+putenv("LC_CTYPE=zh_CN.UTF-8");
 //"/home/wwwroot/test/" 为代码更新到的指定目录路径
-
 $handle = popen('svn up --username zmk --password 123456 /home/wwwroot/test/ 2>&1','r');
 //echo "'$handle'; " . gettype($handle) . "\n";
 $read = stream_get_contents($handle);
