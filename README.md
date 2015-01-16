@@ -10,6 +10,7 @@ svn-hook-to-remote-server
   有时候不是所有人都有A服务器的登录权限的，又或者登录A服务器非常麻烦，比如要先连VPN，然后SSH连接。那样自动触发更新就非常有必要了。
   
   **如果你开发的时候有这个使用情景，那么这几段简短的代码对你非常有用啦！它会在我们往SVN服务器提交代码的时候，自动更新到A服务器上，不管你是在内网还是外网。**
+  
 ##使用说明
 >1. `post-commit` 存放在B服务器（SVN服务器）是svn的钩子文件，存放`svn项目路径/hooks/post-commit`
 
@@ -18,6 +19,7 @@ svn-hook-to-remote-server
 >3. `update.php` 存放在A服务器（Web测试服务器）上，保证该脚本可以通过Web方式访问
 
 >4. `updateMoreSecurity.php` 存放在C服务器（Web线上服务器）上，手动更新脚本，保证该脚本可以通过Web方式访问
+
 ##注意事项
 使用过程可以会有很多的脚本执行权限问题，请往nginx和apache的属主和属组上修改
 ```shell
